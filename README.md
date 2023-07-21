@@ -9,6 +9,7 @@ In-pace Matrix multiplication is a tradeoff between memory and time consuming.
 ## Install
 
 > Supported architectures are specified in [setup.py :: cc_flag](./setup.py#L21)
+> 
 > [Find "cc" of your CUDA device](https://developer.nvidia.com/cuda-gpus)
 
 ```shell
@@ -60,8 +61,7 @@ also you can `inplace_softmax_backward(something)`
 
 ### LayerNorm
 
-This implement doesn't contain element affine. Just calculate x = (x - E(x))/sqrt(V(x)+1e-5) inplace.
-So you need apply affine manully
+This implement doesn't contain element affine. Just calculate x = (x - E(x))/sqrt(V(x)+1e-5) inplace. So you need apply affine manully
 ```python
 from make_torch_inplace import layernorm as layernorm_C
 
